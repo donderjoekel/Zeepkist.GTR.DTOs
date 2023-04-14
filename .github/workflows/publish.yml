@@ -7,30 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
-
-    - name: Set up .NET
-      uses: actions/setup-dotnet@v3
-
-    - name: Restore dependencies
-      run: dotnet restore
-
-    - name: Build
-      run: dotnet build --configuration Release
-
-    - name: Test
-      run: dotnet test --configuration Release --no-build
-
-    - name: Pack
-      run: dotnet pack --configuration Release --no-build --output ./nuget
-
   publish:
-    needs: build
     runs-on: ubuntu-latest
 
     steps:
@@ -42,6 +19,9 @@ jobs:
 
     - name: Restore dependencies
       run: dotnet restore
+
+    - name: Build, Test, and Pack
+      run: dotnet build --configuration Release && dotnet test --configuration Release --no-build && dotnet pack --configuration Release --no-build --output ./nuget
 
     - name: Publish NuGet package
       run: dotnet nuget push ./nuget/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_API_KEY }}
