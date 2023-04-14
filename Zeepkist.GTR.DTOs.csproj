@@ -18,8 +18,4 @@
         <PackageReference Include="OneOf" Version="3.0.243" />
     </ItemGroup>
 
-    <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-        <Exec Command="xcopy &quot;$(TargetPath)&quot; &quot;C:\Program Files (x86)\Steam\steamapps\common\Zeepkist\BepInEx\plugins\GTR&quot; /Y" />
-    </Target>
-
 </Project>
