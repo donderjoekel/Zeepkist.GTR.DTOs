@@ -1,4 +1,5 @@
-﻿using TNRD.Zeepkist.GTR.DTOs.Internal.Models;
+﻿using System;
+using TNRD.Zeepkist.GTR.DTOs.Internal.Models;
 
 namespace TNRD.Zeepkist.GTR.DTOs.ResponseModels;
 
@@ -15,6 +16,7 @@ public class RecordResponseModel
     public string? GameVersion { get; set; }
     public LevelResponseModel? Level { get; set; }
     public UserResponseModel? User { get; set; }
+    public DateTime? DateCreated { get; set; }
 
     public static implicit operator RecordResponseModel(RecordModel model)
     {
@@ -30,7 +32,8 @@ public class RecordResponseModel
             IsWorldRecord = model.IsWorldRecord,
             GameVersion = model.GameVersion,
             Level = model.Level,
-            User = model.User
+            User = model.User,
+            DateCreated = model.DateCreated
         };
     }
 
@@ -48,7 +51,8 @@ public class RecordResponseModel
             IsWorldRecord = model.Match<bool?>(i => null, m => m.IsWorldRecord),
             GameVersion = model.Match<string?>(i => null, m => m.GameVersion),
             Level = model.Match<LevelResponseModel?>(i => null, m => m.Level),
-            User = model.Match<UserResponseModel?>(i => null, m => m.User)
+            User = model.Match<UserResponseModel?>(i => null, m => m.User),
+            DateCreated = model.Match<DateTime?>(i => null, m => m.DateCreated)
         };
     }
 }
