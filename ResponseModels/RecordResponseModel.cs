@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using TNRD.Zeepkist.GTR.DTOs.Internal.Models;
 
 namespace TNRD.Zeepkist.GTR.DTOs.ResponseModels;
@@ -7,7 +8,7 @@ public class RecordResponseModel
 {
     public int Id { get; set; }
     public float? Time { get; set; }
-    public string? Splits { get; set; }
+    public float[]? Splits { get; set; }
     public string? GhostUrl { get; set; }
     public string? ScreenshotUrl { get; set; }
     public bool? IsBest { get; set; }
@@ -24,7 +25,7 @@ public class RecordResponseModel
         {
             Id = model.Id,
             Time = model.Time,
-            Splits = model.Splits,
+            Splits = ParseSplits(model.Splits),
             GhostUrl = model.GhostUrl,
             ScreenshotUrl = model.ScreenshotUrl,
             IsBest = model.IsBest,
@@ -43,7 +44,7 @@ public class RecordResponseModel
         {
             Id = model.Match<int>(i => i, m => m.Id),
             Time = model.Match<float?>(i => null, m => m.Time),
-            Splits = model.Match<string?>(i => null, m => m.Splits),
+            Splits = model.Match<float[]?>(i => null, m => ParseSplits(m.Splits)),
             GhostUrl = model.Match<string?>(i => null, m => m.GhostUrl),
             ScreenshotUrl = model.Match<string?>(i => null, m => m.ScreenshotUrl),
             IsBest = model.Match<bool?>(i => null, m => m.IsBest),
@@ -54,5 +55,10 @@ public class RecordResponseModel
             User = model.Match<UserResponseModel?>(i => null, m => m.User),
             DateCreated = model.Match<DateTime?>(i => null, m => m.DateCreated)
         };
+    }
+
+    private static float[]? ParseSplits(string? splits)
+    {
+        return splits?.Split('|').Select(float.Parse).ToArray();
     }
 }
