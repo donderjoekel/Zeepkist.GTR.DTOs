@@ -59,6 +59,6 @@ public class RecordResponseModel
 
     private static float[]? ParseSplits(string? splits)
     {
-        return splits?.Split('|').Select(float.Parse).ToArray();
+        return string.IsNullOrEmpty(splits) ? Array.Empty<float>() : splits?.Split('|').Select(float.Parse).ToArray();
     }
 }
