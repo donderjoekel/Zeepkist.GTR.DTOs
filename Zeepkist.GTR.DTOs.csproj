@@ -6,7 +6,7 @@
         <Nullable>enable</Nullable>
         <AssemblyName>TNRD.Zeepkist.GTR.DTOs</AssemblyName>
         <RootNamespace>TNRD.Zeepkist.GTR.DTOs</RootNamespace>
-        <Version>2.1.0</Version>
+        <Version>2.2.0</Version>
     </PropertyGroup>
 
     <ItemGroup>
