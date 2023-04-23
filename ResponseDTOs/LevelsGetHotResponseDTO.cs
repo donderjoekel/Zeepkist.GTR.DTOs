@@ -5,11 +5,5 @@ namespace TNRD.Zeepkist.GTR.DTOs.ResponseDTOs;
 
 public class LevelsGetHotResponseDTO
 {
-    public class Info
-    {
-        public LevelResponseModel Level { get; set; }
-        public int RecordsCount { get; set; }
-    }
-    
-    public List<Info> Levels { get; set; }
+    public List<LevelPopularityResponseModel> Levels { get; set; }
 }
