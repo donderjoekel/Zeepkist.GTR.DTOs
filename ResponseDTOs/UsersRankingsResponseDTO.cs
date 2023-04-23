@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using TNRD.Zeepkist.GTR.DTOs.ResponseModels;
 
 namespace TNRD.Zeepkist.GTR.DTOs.ResponseDTOs;
 
@@ -6,17 +7,9 @@ public class UsersRankingsResponseDTO
 {
     public class Ranking
     {
-        public UserModel User { get; set; }
+        public UserResponseModel User { get; set; }
         public int AmountOfWorldRecords { get; set; }
         public int Position { get; set; }
-    }
-
-    public class UserModel
-    {
-        public int Id { get; set; }
-        public string SteamId { get; set; } = null!;
-        
-        public string? SteamName { get; set; }
     }
 
     public int TotalAmount { get; set; }
