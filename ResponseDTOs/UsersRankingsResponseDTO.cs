@@ -10,6 +10,7 @@ public class UsersRankingsResponseDTO
         public UserResponseModel User { get; set; }
         public int AmountOfWorldRecords { get; set; }
         public int Position { get; set; }
+        public double Score { get; set; }
     }
 
     public int TotalAmount { get; set; }

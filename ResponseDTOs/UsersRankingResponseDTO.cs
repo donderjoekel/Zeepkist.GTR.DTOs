@@ -4,4 +4,5 @@ public class UsersRankingResponseDTO
 {
     public int AmountOfWorldRecords { get; set; }
     public int Position { get; set; }
+    public double Score { get; set; }
 }
