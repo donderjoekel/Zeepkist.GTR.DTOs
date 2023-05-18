@@ -15,6 +15,8 @@ public class LevelResponseModel
     public float? TimeSilver { get; set; }
     public float? TimeBronze { get; set; }
     public string? ThumbnailUrl { get; set; }
+    public int? Rank { get; set; }
+    public int? Points { get; set; }
 
     public static implicit operator LevelResponseModel(OneOf<int, LevelModel> levelModel)
     {
@@ -30,7 +32,9 @@ public class LevelResponseModel
             TimeGold = levelModel.Match<float?>(i => null, model => model.TimeGold),
             TimeSilver = levelModel.Match<float?>(i => null, model => model.TimeSilver),
             TimeBronze = levelModel.Match<float?>(i => null, model => model.TimeBronze),
-            ThumbnailUrl = levelModel.Match<string?>(i => null, model => model.ThumbnailUrl)
+            ThumbnailUrl = levelModel.Match<string?>(i => null, model => model.ThumbnailUrl),
+            Rank = levelModel.Match<int?>(i => null, model => model.Rank),
+            Points = levelModel.Match<int?>(i => null, model => model.Points)
         };
     }
 
@@ -48,7 +52,9 @@ public class LevelResponseModel
             TimeGold = levelModel.TimeGold,
             TimeSilver = levelModel.TimeSilver,
             TimeBronze = levelModel.TimeBronze,
-            ThumbnailUrl = levelModel.ThumbnailUrl
+            ThumbnailUrl = levelModel.ThumbnailUrl,
+            Rank = levelModel.Rank,
+            Points = levelModel.Points
         };
     }
 }

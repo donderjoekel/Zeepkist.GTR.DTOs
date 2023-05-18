@@ -11,6 +11,8 @@ public class LevelModel : BaseDirectusModel
     [JsonProperty("time_gold")] public float TimeGold { get; set; }
     [JsonProperty("time_silver")] public float TimeSilver { get; set; }
     [JsonProperty("time_bronze")] public float TimeBronze { get; set; }
+    [JsonProperty("rank")] public int? Rank { get; set; }
+    [JsonProperty("points")] public int? Points { get; set; }
     [JsonProperty("thumbnail_url")] public string ThumbnailUrl { get; set; } = null!;
     [JsonProperty("created_by")] public OneOf<int, UserModel> CreatedBy { get; set; }
 }
