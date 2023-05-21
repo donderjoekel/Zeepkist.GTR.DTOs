@@ -8,6 +8,8 @@ public class UserResponseModel
     public string? SteamId { get; set; }
     public string? SteamName { get; set; }
     public string? DiscordId { get; set; }
+    public int? Position { get; set; }
+    public int? Score { get; set; }
 
     public static implicit operator UserResponseModel(OneOf<int, UserModel> userModel)
     {
@@ -16,7 +18,9 @@ public class UserResponseModel
             Id = userModel.Match<int>(i => i, u => u.Id),
             SteamId = userModel.Match<string?>(i => null, u => u.SteamId),
             SteamName = userModel.Match<string?>(i => null, u => u.SteamName),
-            DiscordId = userModel.Match<string?>(i => null, u => u.DiscordId)
+            DiscordId = userModel.Match<string?>(i => null, u => u.DiscordId),
+            Position = userModel.Match<int?>(i => null, u => u.Position),
+            Score = userModel.Match<int?>(i => null, u => u.Score)
         };
     }
 
@@ -27,7 +31,9 @@ public class UserResponseModel
             Id = userModel.Id,
             SteamId = userModel.SteamId,
             SteamName = userModel.SteamName,
-            DiscordId = userModel.DiscordId
+            DiscordId = userModel.DiscordId,
+            Position = userModel.Position,
+            Score = userModel.Score
         };
     }
 }
