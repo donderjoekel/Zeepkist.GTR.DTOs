@@ -2,6 +2,6 @@
 
 public class LevelPopularityResponseModel
 {
-    public LevelResponseModel Level { get; set; }
+    public LevelResponseModel Level { get; set; } = null!;
     public int RecordsCount { get; set; }
 }
