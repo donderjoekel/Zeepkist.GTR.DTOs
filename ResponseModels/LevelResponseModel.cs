@@ -17,6 +17,7 @@ public class LevelResponseModel
     public string? ThumbnailUrl { get; set; }
     public int? Rank { get; set; }
     public int? Points { get; set; }
+    public RecordResponseModel? WorldRecord { get; set; }
 
     public static implicit operator LevelResponseModel(OneOf<int, LevelModel> levelModel)
     {
