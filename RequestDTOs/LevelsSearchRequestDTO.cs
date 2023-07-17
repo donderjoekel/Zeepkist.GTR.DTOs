@@ -6,6 +6,8 @@ namespace TNRD.Zeepkist.GTR.DTOs.RequestDTOs;
 public class LevelsSearchRequestDTO : GenericGetRequestDTO
 {
     [QueryParam, DefaultValue(null)] public string? Query { get; set; }
+    [QueryParam, DefaultValue(null)] public bool? AuthorOnly { get; set; }
+    [QueryParam, DefaultValue(null)] public bool? LevelOnly { get; set; }
     [QueryParam, DefaultValue(null)] public float? MinAuthor { get; set; }
     [QueryParam, DefaultValue(null)] public float? MaxAuthor { get; set; }
     [QueryParam, DefaultValue(null)] public float? MinGold { get; set; }
