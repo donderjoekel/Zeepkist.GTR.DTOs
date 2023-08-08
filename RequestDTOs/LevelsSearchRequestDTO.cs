@@ -16,5 +16,7 @@ public class LevelsSearchRequestDTO : GenericGetRequestDTO
     [QueryParam, DefaultValue(null)] public float? MaxSilver { get; set; }
     [QueryParam, DefaultValue(null)] public float? MinBronze { get; set; }
     [QueryParam, DefaultValue(null)] public float? MaxBronze { get; set; }
+    [QueryParam, DefaultValue(null)] public float? MinPoints { get; set; }
+    [QueryParam, DefaultValue(null)] public float? MaxPoints { get; set; }
     [QueryParam, DefaultValue(null)] public string? Sort { get; set; }
 }
