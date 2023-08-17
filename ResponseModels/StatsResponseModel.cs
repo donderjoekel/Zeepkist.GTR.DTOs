@@ -84,10 +84,12 @@ public class StatsResponseModel
     public float TimeOnGrass { get; set; }
 
     public float TimeOnIce { get; set; }
-    
+
     public int TimesStarted { get; set; }
-    
+
     public int TimesFinished { get; set; }
-    
+
     public int WheelsBroken { get; set; }
+
+    public int CheckpointsCrossed { get; set; }
 }
