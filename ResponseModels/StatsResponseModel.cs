@@ -3,6 +3,13 @@
 public class StatsResponseModel
 {
     public int Id { get; set; }
+    
+    public UserResponseModel? User { get; set; }
+
+    public int Month { get; set; }
+
+    public int Year { get; set; }
+
     public int CrashTotal { get; set; }
 
     public int CrashRegular { get; set; }

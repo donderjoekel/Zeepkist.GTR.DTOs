@@ -8,5 +8,4 @@ public class UserResponseModel
     public string? DiscordId { get; set; }
     public int? Position { get; set; }
     public int? Score { get; set; }
-    public StatsResponseModel? Stats { get; set; }
 }
