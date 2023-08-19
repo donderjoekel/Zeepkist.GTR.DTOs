@@ -2,10 +2,6 @@
 
 public class StatsResponseModel
 {
-    public int Id { get; set; }
-    
-    public UserResponseModel? User { get; set; }
-
     public int Month { get; set; }
 
     public int Year { get; set; }
