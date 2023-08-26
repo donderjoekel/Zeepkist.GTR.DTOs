@@ -16,6 +16,8 @@ public class RecordsGetRequestDTO : GenericGetRequestDTO
     [QueryParam, DefaultValue(null)] public bool? WorldRecordOnly { get; set; }
     [QueryParam, DefaultValue(null)] public float? MinimumTime { get; set; }
     [QueryParam, DefaultValue(null)] public float? MaximumTime { get; set; }
+    [QueryParam, DefaultValue(null)] public string? After { get; set; }
+    [QueryParam, DefaultValue(null)] public string? Before { get; set; }
     [QueryParam, DefaultValue(null)] public string? GameVersion { get; set; }
     [QueryParam, DefaultValue(null)] public string? Sort { get; set; }
 }
