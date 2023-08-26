@@ -7,7 +7,7 @@ namespace TNRD.Zeepkist.GTR.DTOs.ResponseDTOs;
 public class RecordsGetResponseDTO
 {
     public int TotalAmount { get; set; }
-    public DateTimeOffset? After { get; set; }
-    public DateTimeOffset? Before { get; set; }
+    public DateTime? After { get; set; }
+    public DateTime? Before { get; set; }
     public List<RecordResponseModel> Records { get; set; } = null!;
 }
