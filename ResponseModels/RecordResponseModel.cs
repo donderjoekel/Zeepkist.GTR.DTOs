@@ -13,6 +13,7 @@ public class RecordResponseModel
     public bool? IsValid { get; set; }
     public bool? IsWorldRecord { get; set; }
     public string? GameVersion { get; set; }
+    public string? LevelHash { get; set; }
     public LevelResponseModel? Level { get; set; }
     public UserResponseModel? User { get; set; }
     public DateTime? DateCreated { get; set; }
