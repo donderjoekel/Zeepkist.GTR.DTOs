@@ -1,5 +1,6 @@
 ﻿namespace TNRD.Zeepkist.GTR.DTOs.RequestDTOs;
 
+[AutoGenerateBuilder]
 public class UsersUpdateStatsRequestDTO
 {
     public int CrashTotal { get; set; }
