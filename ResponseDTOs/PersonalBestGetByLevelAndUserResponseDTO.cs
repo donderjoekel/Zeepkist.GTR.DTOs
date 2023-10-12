@@ -2,7 +2,7 @@
 
 namespace TNRD.Zeepkist.GTR.DTOs.ResponseDTOs;
 
-public class PersonalBestGetByRecordResponseDTO
+public class PersonalBestGetByLevelAndUserResponseDTO
 {
     public PersonalBestResponseModel PersonalBest { get; set; } = null!;
 }
