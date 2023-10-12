@@ -7,7 +7,7 @@ public class VotesGetAverageResponseDTO
 {
     public class AverageLevelScore
     {
-        public LevelResponseModel Level { get; set; } = null!;
+        public string Level { get; set; } = null!;
         public float AverageScore { get; set; }
         public int AmountOfVotes { get; set; }
     }

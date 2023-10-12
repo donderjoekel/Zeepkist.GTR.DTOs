@@ -3,5 +3,5 @@
 [AutoGenerateBuilder]
 public class UpvotesAddRequestDTO
 {
-    public int LevelId { get; set; }
+    public string Level { get; set; } = null!;
 }

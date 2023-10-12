@@ -3,9 +3,7 @@
 [AutoGenerateBuilder]
 public class FavoritesGetAllRequestDTO : GenericGetRequestDTO
 {
-    public int? LevelId { get; set; }
-    public string? LevelUid { get; set; }
-    public string? LevelWorkshopId { get; set; }
+    public string? Level { get; set; }
     public int? UserId { get; set; }
     public string? UserSteamId { get; set; }
 }

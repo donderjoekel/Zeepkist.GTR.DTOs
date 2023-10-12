@@ -4,6 +4,6 @@ public class ProcessPersonalBestRequest
 {
     public int Record { get; set; }
     public int User { get; set; }
-    public int Level { get; set; }
+    public string Level { get; set; } = null!;
     public float Time { get; set; }
 }

@@ -3,6 +3,6 @@
 [AutoGenerateBuilder]
 public class VotesSubmitRequestDTO
 {
-    public int Level { get; set; }
+    public string Level { get; set; } = null!;
     public int Score { get; set; }
 }

@@ -6,5 +6,5 @@ public class VoteResponseModel
     public int? Category { get; set; }
     public int? Score { get; set; }
     public UserResponseModel? User { get; set; }
-    public LevelResponseModel? Level { get; set; }
+    public string? Level { get; set; }
 }

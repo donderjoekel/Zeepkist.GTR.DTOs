@@ -3,6 +3,6 @@
 [AutoGenerateBuilder]
 public class WorldRecordGetByLevelAndUserRequestDTO
 {
-    public int Level { get; set; }
+    public string Level { get; set; } = null!;
     public int User { get; set; }
 }
