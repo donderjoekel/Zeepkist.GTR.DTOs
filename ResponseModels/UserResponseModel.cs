@@ -6,6 +6,4 @@ public class UserResponseModel
     public string? SteamId { get; set; }
     public string? SteamName { get; set; }
     public string? DiscordId { get; set; }
-    public int? Position { get; set; }
-    public int? Score { get; set; }
 }
