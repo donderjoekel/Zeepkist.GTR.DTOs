@@ -6,7 +6,7 @@
         <Nullable>enable</Nullable>
         <AssemblyName>TNRD.Zeepkist.GTR.DTOs</AssemblyName>
         <RootNamespace>TNRD.Zeepkist.GTR.DTOs</RootNamespace>
-        <Version>5.5.0</Version>
+        <Version>5.6.0</Version>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
